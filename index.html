@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect | College Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🎓 CampusConnect</div>
+    <span>College Event Management System</span>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div><p class="eyebrow">YOUR CAMPUS. YOUR COMMUNITY.</p>
+      <h1>Discover what's<br><span>happening on campus.</span></h1>
+      <p class="sub">Find events, meet people and make memories.</p></div>
+      <div class="hero-icon">🎉</div>
+    </section>
+    <section class="toolbar">
+      <div><h2>Upcoming Events</h2><p class="muted">Explore and register for college activities.</p></div>
+      <button class="primary" id="showForm">＋ Add Event</button>
+    </section>
+    <form id="eventForm" class="form hidden">
+      <h3>Add a new event</h3>
+      <div class="fields">
+        <input id="eventName" placeholder="Event name" required>
+        <input id="eventDate" type="date" required>
+        <input id="eventVenue" placeholder="Venue" required>
+        <input id="eventCategory" placeholder="Category (Technical, Cultural...)" required>
+      </div>
+      <textarea id="eventDescription" placeholder="Short event description" required></textarea>
+      <button class="primary" type="submit">Save Event</button>
+      <button class="secondary" type="button" id="cancelForm">Cancel</button>
+    </form>
+    <div id="eventList" class="events"></div>
+    <p id="emptyMessage" class="empty hidden">No events available. Add the first event!</p>
+    <section class="stats">
+      <div><strong id="eventCount">0</strong><span>Events listed</span></div>
+      <div><strong id="registrationCount">0</strong><span>Registrations</span></div>
+      <div><strong>Open</strong><span>For all students</span></div>
+    </section>
+  </main>
+  <footer>CampusConnect · College Event Management System</footer>
+  <script src="script.js"></script>
+</body>
+</html>
